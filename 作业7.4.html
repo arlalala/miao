@@ -15,7 +15,7 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quasi?</p>
       <a target= blank href=https://www.jd.com/>在新窗口打开京东</a>
       <a href=mailto "xxxx@qq.com">点我发邮件</a>
-      <a href="last">跳到页面底部</a>
+      <a href="#last">跳到页面底部</a>
       <a href=download>点我下载文件</a>
       <hr>
       <img width="200" height="200" src ="stock-photo-229389427.jpg">
@@ -31,7 +31,8 @@
           return 8
           }
         </code>
-      </pre>>
+        <hr>
+      </pre>
       <ul>
          <li>小学
           <ol>
@@ -45,6 +46,7 @@
          </li>
          <li>初中</li>
          <li>高中</li>
+         <hr>
       </ul>
       <dl>
         <dt>班级</dt>
@@ -58,14 +60,57 @@
         <dd>豆豆</dd>
       </dl>
       <h1>Google搜索</h1>
-      <form action="https://baidu.com/s" target="_blank">
+      <form action="https://www.baidu.com/s" target="_blank">
         <input type="text" name="wd">
-        <input type="button"value="在新窗口打开搜索结果">
+        <input type="hidden" name="IE" value="utf-8">
+        <input type="submit"value="在新窗口打开搜索结果">
       </form>
-      <h3>个人信息调查表</h3>
-      <form>
-        <input type="radio" value="male">男
-        <input type="radio" value="female">女
+      <h2>个人信息调查表</h2>
+      <form><dt>
+        性别：
+        </dt>
+        <dd> <input type="radio" value="male"id="gender-male"><label for="gender-male"> 男</label>
+        <input type="radio" value="female"id="gender-female"><label for="gender-female"> 女</label>
+        </dd>
+        <br>
+        <dt placeholder="请输入"> 年龄：</dt>
+        <dd>
+           <select name="age">
+              <option value="请选择" disabled hidden selected>请选择</option>
+            <optgroup label="少年">
+              <option value="">1到6岁</option>
+              <option value="">7到12岁</option>
+           </optgroup>
+           <optgroup label="青年">
+               <option value="">13到15岁</option>
+               <option value="">16到18岁</option></select>
+           </optgroup>
+        </dd>
+
+        <br>
+        <dt> 生日</dt>
+        <dd> <input type="date"value="2022-07-05"></dd>
+        <br>
+        <dt> 生辰</dt>
+        <dd><input type="time">  </dd>
+        <br>
+        <dt> 照片</dt>
+        <dd> <label>
+        <input type="file"accept="image/*" hidden>点我上传照片，我比文件上传按钮好看
+        </label></dd>
+
+       <br>
+       <fieldset>
+       <dt><legend>自我介绍</legend> </dt>
+       <textarea name="cemment" id="" cols="30" rows="10">&lt;/textarea&gt;</textarea>
+      </fieldset>
+      <fieldset disabled>
+        <legend>这里被禁用了</legend>
+        <input type="text"><input type="text"><input type="text"><input type="text">
+      </fieldset>
+      <input type="submit" value="提交">
+      <input type="reset" value="重置">
+
       </form>
 
 
@@ -74,6 +119,6 @@
 
 
 
-       <div id="#last">到底啦</div>
+       <div id="last">到底啦</div>
 </body>
 </html>
