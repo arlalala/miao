@@ -6,169 +6,170 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    *{
-      background-color: rgba(0,0, 0, 0.1);
-    }
-    body {
-        margin: 0;
-        min-width: 920px;
-      }
-    .a{
-      width: 200px;
-      height: 100vh;
-      background-color: pink;
-    }
-    .b{
-      margin-left: 200px;
-      margin-top: -100vh;
-      width: calc(100% - 600px);
-      height: 100vh;
-      background-color:rgba(255, 248, 220);
-    }
-    .c{
-      margin-left:calc(100% - 400px);
-      margin-top: calc(-100vh - 1px );
-      width: 200px;
-      height: 100vh;
-      background-color: pink;
-    }
-    .d{
-      margin-left: calc(100% - 200px);
-      margin-top: calc( -100vh - 3px );
-      width: 200px ;
-      height: 100vh ;
-      background-color: pink;
-    }
-    .x{
-      font-size: 24px;
-      margin-left: 50px;
-      height: 60px;
-    }
-    ul{
-      height: calc(100% - 60px);
-      width: 150px;
-      font-size: 12px;
-      overflow: auto;
-    }
-    .y{
-      font-size: 24px;
-      height: 60px;
-      border: 2px solid black;
-    }
-    .z{
-      font-size: 16px;
-      border: 2px solid black;
-      height: calc(100% - 60px );
-      overflow-y: scroll;
-    }
-    .c{
-      font-size: 24px;
-      border: 2px solid black;
-    }
-    .d{
-      font-size: 24px;
-      border: 2px solid black;
-    }
-    div{
-      counter-increment: mycounter;
-    }
-    div
+   *{
+    background-color: aliceblue;
+   }
+   body *{
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+   }
+   body{
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    font-size: 0;
+    min-width: 1000px;
+   }
+   .a,.d,.c{
+    box-sizing: border-box;
+    width: 200px;
+    height: 100vh;
+    background-color: pink;
+   }
+   .b{
+    box-sizing: border-box;
+    width: calc(100% - 600px);
+    height: 100vh;
+    background-color: rgb(229, 223, 198)
+   }
+   .x,.z,.c,.d{
+    font-size: 40px;
+    border: 1.5px solid black;
+   }
+   .y,.u{
+    font-size: 16px;
+    overflow:auto;
+    height: calc(100% - 100px);
+    border: 1.5px solid black;
+   }
+   .z,.u{
+    background-color: rgb(229, 223, 198)
+   }
+   .y,.x{
+    background-color: pink;
+   }
+   .z{
+    width: 100%;
+    height: 100px;
+   }
+   .x{
+    height: 100px;
+   }
+   ul>li{
+    display:block;
+    background-color: pink;
+   }
+   ul{
+    box-sizing: border-box;
+    width: 200px;
+    background-color: pink;
+   }
+   a{
+    background-color: pink;
+   }
+
 
 
   </style>
 </head>
 <body>
-  <div class="a">
-    <div class="x">OALD Se7en</div>
+  <span class="a">
+    <span class="x">OALD Se7en</span>
+    <span class="y">
     <ul>
-        <li>word1</li>
-        <li>word2</li>
-        <li>word3</li>
-        <li>word4</li>
-        <li>word5</li>
-        <li>word6</li>
-        <li>word7</li>
-        <li>word8</li>
-        <li>word9</li>
-        <li>word10</li>
-        <li>word11</li>
-        <li>word12</li>
-        <li>word13</li>
-        <li>word14</li>
-        <li>word15</li>
-        <li>word16</li>
-        <li>word17</li>
-        <li>word18</li>
-        <li>word19</li>
-        <li>word20</li>
-        <li>word21</li>
-        <li>word22</li>
-        <li>word23</li>
-        <li>word24</li>
-        <li>word25</li>
-        <li>word26</li>
-        <li>word27</li>
-        <li>word28</li>
-        <li>word29</li>
-        <li>word30</li>
-        <li>word31</li>
-        <li>word32</li>
-        <li>word33</li>
-        <li>word34</li>
-        <li>word35</li>
-        <li>word36</li>
-        <li>word37</li>
-        <li>word38</li>
-        <li>word39</li>
-        <li>word40</li>
-        <li>word41</li>
-        <li>word42</li>
-        <li>word43</li>
-        <li>word44</li>
-        <li>word45</li>
-        <li>word46</li>
-        <li>word47</li>
-        <li>word48</li>
-        <li>word49</li>
-        <li>word50</li>
-        <li>word51</li>
-        <li>word52</li>
-        <li>word53</li>
-        <li>word54</li>
-        <li>word55</li>
-        <li>word56</li>
-        <li>word57</li>
-        <li>word58</li>
-        <li>word59</li>
-        <li>word60</li>
-  </ul>
-  </div>
-  <div class="b">
-    <div class="y">fantasy</div>
-   <div class="z">Lorem,ipsurm.
-    <p>1.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>2.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>3.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>4.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>5.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>6.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>7.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>8.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>9.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>10.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>11.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>12.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>13.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>14.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>15.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>16.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>17.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>18.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>19.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-    <p>20.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ut natus molestias tenetur ab rem sit? Laudantium vitae, neque, illo quae deleniti numquam cum, eum voluptas eligendi repellendus exercitationem iure!</p>
-   </div>
-  </div>
-  <div class="c">Vocabulary</div>
-   <div class="d">History</div>
+      <li><a href="">word01</a></li>
+      <li><a href="">word02</a></li>
+      <li><a href="">word03</a></li>
+      <li><a href="">word04</a></li>
+      <li><a href="">word05</a></li>
+      <li><a href="">word06</a></li>
+      <li><a href="">word07</a></li>
+      <li><a href="">word08</a></li>
+      <li><a href="">word09</a></li>
+      <li><a href="">word10</a></li>
+      <li><a href="">word11</a></li>
+      <li><a href="">word12</a></li>
+      <li><a href="">word13</a></li>
+      <li><a href="">word14</a></li>
+      <li><a href="">word15</a></li>
+      <li><a href="">word16</a></li>
+      <li><a href="">word17</a></li>
+      <li><a href="">word18</a></li>
+      <li><a href="">word19</a></li>
+      <li><a href="">word20</a></li>
+      <li><a href="">word21</a></li>
+      <li><a href="">word22</a></li>
+      <li><a href="">word23</a></li>
+      <li><a href="">word24</a></li>
+      <li><a href="">word25</a></li>
+      <li><a href="">word26</a></li>
+      <li><a href="">word27</a></li>
+      <li><a href="">word28</a></li>
+      <li><a href="">word29</a></li>
+      <li><a href="">word30</a></li>
+      <li><a href="">word31</a></li>
+      <li><a href="">word32</a></li>
+      <li><a href="">word33</a></li>
+      <li><a href="">word34</a></li>
+      <li><a href="">word35</a></li>
+      <li><a href="">word36</a></li>
+      <li><a href="">word37</a></li>
+      <li><a href="">word38</a></li>
+      <li><a href="">word39</a></li>
+      <li><a href="">word40</a></li>
+      <li><a href="">word41</a></li>
+      <li><a href="">word42</a></li>
+      <li><a href="">word43</a></li>
+      <li><a href="">word44</a></li>
+      <li><a href="">word45</a></li>
+      <li><a href="">word46</a></li>
+      <li><a href="">word47</a></li>
+      <li><a href="">word48</a></li>
+      <li><a href="">word49</a></li>
+      <li><a href="">word50</a></li>
+      <li><a href="">word51</a></li>
+      <li><a href="">word52</a></li>
+      <li><a href="">word53</a></li>
+      <li><a href="">word54</a></li>
+      <li><a href="">word55</a></li>
+      <li><a href="">word56</a></li>
+      <li><a href="">word57</a></li>
+      <li><a href="">word58</a></li>
+      <li><a href="">word59</a></li>
+      <li><a href="">word60</a></li>
+    </ul>
+    </span>
+  </span>
+  <span class="b">
+    <span class="z">fantasy</span>
+    <span class="u">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque in nesciunt ipsam perspiciatis eum, beatae magni nemo libero distinctio autem, velit itaque corrupti voluptatibus eius iure ex, aspernatur ratione aut?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis provident tempore quidem libero necessitatibus repellendus adipisci quas, labore quibusdam. Quis adipisci harum quae id. Ex ipsam accusantium error quo.
+      LoremLorem ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis provident tempore quidem libero necessitatibus repellendus adipisci quas, labore quibusdam. Quis adipisci harum quae id. Ex ipsam accusantium error quo.
+      Lorem
+      lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis provident tempore quidem libero necessitatibus repellendus adipisci quas, labore quibusdam. Quis adipisci harum quae id. Ex ipsam accusantium error quo.
+      LoremLorem ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis provident tempore quidem libero necessitatibus repellendus adipisci quas, labore quibusdam. Quis adipisci harum quae id. Ex ipsam accusantium error quo.
+      LoremLorem ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis provident tempore quidem libero necessitatibus repellendus adipisci quas, labore quibusdam. Quis adipisci harum quae id. Ex ipsam accusantium error quo.
+      LoremLorem ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis provident tempore quidem libero necessitatibus repellendus adipisci quas, labore quibusdam. Quis adipisci harum quae id. Ex ipsam accusantium error quo.
+      Lorem
+      lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis provident tempore quidem libero necessitatibus repellendus adipisci quas, labore quibusdam. Quis adipisci harum quae id. Ex ipsam accusantium error quo.
+      LoremLorem ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis provident tempore quidem libero necessitatibus repellendus adipisci quas, labore quibusdam. Quis adipisci harum quae id. Ex ipsam accusantium error quo.
+      Lorem
+      lorem
+      ipsum dol
+      ipsum dolor sit amet consectetur adipisicing elit. Id
+      lorem
+      ipsu
+      lorem
+      ipsum dol
+      ipsum dolor sit amet consectetur adipisicing elit. Id
+      lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Id dicta quam perspiciatis officia quibusdam delectus, ratione aliquid temporibus enim eius recusandae, numquam eligendi impedit minima magni, eos exercitationem perferendis repellat!
+    </span>
+  </span>
+  <span class="c">Vocabulary</span>
+  <span class="d">History</span>
+
 </body>
 </html>
