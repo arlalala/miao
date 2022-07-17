@@ -6,78 +6,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-   *{
-    background-color: aliceblue;
-   }
-   body *{
-    display: inline-block;
-    margin: 0;
-    overflow: hidden;
-   }
-   body{
-    margin: 0;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100vh;
-    font-size: 0;
-    min-width: 1000px;
-   }
-   .a,.d,.c{
-    box-sizing: border-box;
-    width: 200px;
-    height: 100vh;
-    background-color: pink;
-   }
-   .b{
-    box-sizing: border-box;
-    width: calc(100% - 600px);
-    height: 100vh;
-    background-color: rgb(229, 223, 198)
-   }
-   .x,.z,.c,.d{
-    font-size: 40px;
-    border: 1.5px solid black;
-   }
-   .y,.u{
-    font-size: 16px;
-    overflow:auto;
-    height: calc(100% - 100px);
-    border: 1.5px solid black;
-   }
-   .z,.u{
-    background-color: rgb(229, 223, 198)
-   }
-   .y,.x{
-    background-color: pink;
-   }
-   .z{
-    width: 100%;
-    height: 100px;
-   }
-   .x{
-    height: 100px;
-   }
-   ul>li{
-    display:block;
-    background-color: pink;
-   }
-   ul{
-    box-sizing: border-box;
-    width: 200px;
-    background-color: pink;
-   }
-   a{
-    background-color: pink;
-   }
-
+    *{
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    html{
+      height: 100%;
+    }
+    body{
+      height: 100%;
+    }
+    .a,.c,.d{
+      position: fixed;
+      width: 200px;
+      height: 100%;
+      top:0;
+      bottom: 0;
+      border: 1.5px solid ;
+      background-color: pink;
+      font-size: 30px;
+    }
+    .a{
+      left:0;
+     }
+    .b{
+      position: fixed;
+      right:400px;
+      left:202px;
+      top:0;
+      bottom: 0;
+      background-color: blanchedalmond;
+    }
+    .c{
+      right:200px;
+    }
+    .d{
+      right:0;
+    }
+    .x{
+      font-size: 30px;
+      width: 200px;
+      height: 100px;
+      border: 1.5px solid ;
+    }
+    input,button{
+      background-color: aliceblue;
+    }
+    .y{
+      position: fixed;
+      top: 100px;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      overflow: auto;
+      font-size: 12px;
+    }
+    .z{
+      position: fixed;
+      font-size: 30px;
+      height: 100px;
+      border: 1.5px solid ;
+      left:200px;
+      right:400px;
+      text-align: center;
+      line-height: 100px;
+    }
+    .u{
+      position: fixed;
+      left: 202px;
+      top: 100px;
+      right:400px;
+      bottom: 0;
+      overflow: auto;
+      font-size: 20px;
+    }
+    ul{
+      margin: 0;
+    }
 
 
   </style>
 </head>
 <body>
-  <span class="a">
-    <span class="x">OALD Se7en</span>
-    <span class="y">
+  <div class="a">
+    <div class="x">OALD Se7en
+      <input type="text">
+      <button>&nbsp;&nbsp;&nbsp;&nbsp;</button>
+    </div>
+    <div class="y">
     <ul>
       <li><a href="">word01</a></li>
       <li><a href="">word02</a></li>
@@ -140,9 +155,9 @@
       <li><a href="">word59</a></li>
       <li><a href="">word60</a></li>
     </ul>
-    </span>
-  </span>
-  <span class="b">
+    </div>
+  </div>
+  <div class="b">
     <span class="z">fantasy</span>
     <span class="u">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque in nesciunt ipsam perspiciatis eum, beatae magni nemo libero distinctio autem, velit itaque corrupti voluptatibus eius iure ex, aspernatur ratione aut?
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis provident tempore quidem libero necessitatibus repellendus adipisci quas, labore quibusdam. Quis adipisci harum quae id. Ex ipsam accusantium error quo.
@@ -167,9 +182,8 @@
       lorem
       ipsum dolor sit amet consectetur adipisicing elit. Id dicta quam perspiciatis officia quibusdam delectus, ratione aliquid temporibus enim eius recusandae, numquam eligendi impedit minima magni, eos exercitationem perferendis repellat!
     </span>
-  </span>
-  <span class="c">Vocabulary</span>
-  <span class="d">History</span>
-
+  </div>
+  <div class="c">Vocabulary</div>
+  <div class="d">History</div>
 </body>
 </html>
