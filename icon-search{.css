@@ -1,0 +1,35 @@
+span{
+  display: inline-block;
+  height: 60px;
+  vertical-align: middle;
+}
+.icon-search{
+  background-image: url(22.png);
+  height: 37px;
+  background-position: -87px 0px;
+  width: 37px;
+}
+.icon-voice{
+  background-image: url(22.png);
+  height: 37px;
+  background-position: -48px 0px;
+  width: 37px;
+}
+.icon-camaro{
+  background-image: url(22.png);
+  height: 37px;
+  background-position: 0px -40px;
+  width: 37px;
+}
+.icon-forword{
+  background-image: url(22.png);
+  height: 62px;
+  background-position: -400px 0px;
+  width: 65px;
+}
+.icon-action{
+  background-image: url(22.png);
+  height: 37px;
+  background-position: -665px -40px;
+  width: 37px;
+}
