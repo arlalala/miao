@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+    --size:5px solid blue;
+    --hover-size:5px solid red;
+    }
+    table{
+      margin: 0;
+      color: green;
+      border-collapse:collapse ;
+    }
+    table td{
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    table ,table col, table tr{
+      border: var(--size);
+    }
+    table td:hover{
+      border: var(--hover-size);
+      cursor:pointer;
+    }
+   div{
+    display: table-cell;
+    /* background-color: green; */
+    box-shadow: 150px 200px  300px green inset ;
+    width: 300px;
+    height: 100px;
+    font-size: 20px;
+    vertical-align: bottom;
+    border-bottom: 5px solid red;
+   }
+   div:hover{
+    transition: font-size 5s, box-shadow 1s;
+    /* background-color: rgb(79, 121, 141); */
+    box-shadow:   150px 100px  300px rgb(160, 208, 204) inset;
+    font-size: 70px;
+   }
+   section{
+   text-align: center;
+   }
+   section ul{
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+    padding: 0;
+    width: 200px;
+   }
+   section li{
+    width: 50px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    margin: -2.5px;
+    border: var(--size);
+    line-height: 45px;
+    color: green;
+   }
+   section li:hover{
+    border: var(--hover-size);
+    position: relative;
+    cursor:pointer;
+   }
+   aside{
+    margin-top: 300px;
+   }
+   aside ul{
+    list-style-type: none;
+    padding: 0;
+    width: 180px;
+    display: flex;
+    flex-flow:row wrap;
+   }
+   aside li{
+   width: 50px;
+   height: 50px;
+   border: var(--size);
+   margin: -2.5px;
+   text-align: center;
+   line-height: 45px;
+   color: green;
+   }
+   aside li:hover{
+    border: var(--hover-size);
+    position: relative;
+    cursor:pointer;
+   }
+  </style>
+</head>
+<body>
+  <table>表格
+    <col>
+    <col>
+    <col>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+  </table>
+<div>
+  订阅博客
+</div>
+<section>浮动
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
+</section>
+<aside>
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+</ul>
+</aside>
+</body>
+</html>
