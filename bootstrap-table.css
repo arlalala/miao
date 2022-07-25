@@ -2,16 +2,11 @@
 table{
   width: 100%;
   border-collapse:collapse;
-
-}
-td:empty{
-  display:none;
 }
 table th,td{
   border-bottom: 1px solid rgba(222,226,230);
   padding-bottom:0.5em;
   padding-top: 0.5em;
-  empty-cells: show;
 }
 table tr :last-child{
   padding-left: 1%;
@@ -29,10 +24,8 @@ table th{
  text-align: left;
 }
 
-.table-striped tbody > :first-child{
-  background-color: rgba(242,242,242);
-}
-.table-striped tbody > :nth-child(3){
+
+.table-striped tbody > :nth-child(2n+1){
   background-color: rgba(242,242,242);
 }
 
@@ -57,7 +50,7 @@ table th{
 .table-dark *{
  color: white;
 }
-.table-dark > tbody >tr:hover{
+.table-dark.table-hover > tbody >tr:hover{
   background-color:rgba(50,53,57)
 }
 
@@ -65,6 +58,6 @@ table th{
   padding: 0;
 }
 
-.table-striped-column tr>:nth-child(2){
+.table-striped-column tr>:nth-child(2n){
   background-color:rgba(50,53,57);
 }
