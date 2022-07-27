@@ -59,14 +59,15 @@
     height: 50px;
     float: left;
     text-align: center;
-    margin: -2.5px;
+    margin: 0 -5px -5px 0;
     border: var(--size);
-    line-height: 45px;
+    line-height: 44px;
     color: green;
+    position: relative;
    }
    section li:hover{
     border: var(--hover-size);
-    position: relative;
+    z-index: 8;
     cursor:pointer;
    }
    aside{
@@ -83,14 +84,15 @@
    width: 50px;
    height: 50px;
    border: var(--size);
-   margin: -2.5px;
+   margin:0 -5px -5px 0;
    text-align: center;
    line-height: 45px;
    color: green;
+   position: relative;
    }
    aside li:hover{
     border: var(--hover-size);
-    position: relative;
+    z-index: 8;
     cursor:pointer;
    }
   </style>
