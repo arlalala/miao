@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ *{
+  background-color:rgba(0,0,0,0.1);
+  box-shadow:0 0 5px black;
+  text-align:center;
+  line-height:100px;
+}
+div{
+  width:100px;
+  height:100px;
+  margin:100px;
+  position:absolute;
+  opacity: 0.5;
+}
+section{
+  transform-style:preserve-3d;
+  position: relative;
+  transform: rotatex(20deg);
+}
+section>div:nth-child(1){
+  background-color: #fff;
+  transform:translateZ(50px);
+}
+section>div:nth-child(2){
+ transform: rotatex(90deg) translateZ(50px);
+ background-color: blue;
+}
+section>div:nth-child(3){
+ transform: rotatex(-90deg) translateZ(50px);
+ background-color: green;
+}
+section>div:nth-child(4){
+ transform: rotatey(90deg) translateZ(50px);
+ background-color: red;
+}
+section>div:nth-child(5){
+ transform: rotatey(-90deg)  translateZ(50px);
+ background-color:yellow;
+}
+section>div:nth-child(6){
+transform:translateZ(-50px);
+background-color:pink;
+}
+html:hover section{
+  transform: rotatey(180deg);
+  transition: 5s;
+}
+  </style>
+</head>
+<body>
+  <section>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </section>
+</body>
+</html>

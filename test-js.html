@@ -1,0 +1,20 @@
+<script>
+  x = 98
+  console.log( x ) // 输出x
+  console.log( 2 * x ) // 输出x的两倍
+  console.log( x * x ) // 输出x的平方
+  console.log( x ** 3 ) // 输出x的三次方
+  console.log( x ** 5 ) // 输出x的五次平方
+  console.log( x>50 && x<100 ) // 输出x是否在50到100以内，是输出true，不是输出false
+  console.log( x%2 === 1 ) // 输出x是否为奇数，是输出true，不是输出false
+  console.log( x%2 === 0 ) // 输出x是否为偶数，是输出true，不是输出false
+  console.log( x%10 ) // 输出x的个位数
+  console.log( (x%1000 - x%100)/100 ) // 输出x的百位数
+  console.log( x%1000 ) // 输出x百位数以下的部分，对于2021，即输出21，对于2035，即输出35
+  console.log( (x>200&& x%3===0)&& x%7 !==0 ) // 输出x是否大于200且为3的倍数但不是7的倍数。
+  console.log( ((x-x%100)/100 )+1 ) // 输出x做为年份时，所在的世纪，对于2022即输出21，对于1864即输出19
+  console.log( x%4 ===0 ) // 输出x做为年份时，当年是否会举办奥运会
+  console.log( (x%4 -2) ===0 ) // 输出x做为年份时，当年是否会举办世界杯
+  console.log( x%4 === 0  ) // 输出x做为年份时，是否为闰年，是输出true，不是输出false，闰年的定义请自行查询
+  console.log( ((x-22)%11 !==0&&(x-14)%7 !==0)&&(((x-10)%5 !==0&&(x-6)%3 !==0)&&(x-4)%2 !== 0) ) // 输出x是否为素数（此时x范围为100以内）
+  </script>
