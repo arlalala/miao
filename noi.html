@@ -1,0 +1,285 @@
+
+<script type="x" id="ch0103/01">
+ var a = Number(prompt("A的值", ))
+ var b = Number(prompt("B的值", ))
+ console.log(a+b)
+</script>
+
+<script type="x" id="ch0103/02">
+  var a = Number(prompt("A的值", ))
+  var b = Number(prompt("B的值", ))
+  var c = Number(prompt("C的值", ))
+  console.log((a+b)*c)
+</script>
+
+<script type="x" id="ch0103/03">
+  var a = Number(prompt("A的值", ))
+  var b = Number(prompt("B的值", ))
+  var c = Number(prompt("C的值", ))
+  var result= (a+b)/c-0.5
+  console.log(result.toFixed(0))
+</script>
+
+<script type="x" id="ch0103/04">
+  var a = Number(prompt("A的值", ))
+  var b = Number(prompt("B的值", ))
+  var result2= a%b
+  var result= (a - result2)/b
+  console.log(result.toFixed(0)  + " " + result2)
+</script>
+
+<script type="x" id="ch0103/05">
+  var a = Number(prompt("A的值", ))
+  var b = Number(prompt("B的值", ))
+  var result= a/b
+  console.log(result.toFixed(9))
+</script>
+
+<script type="x" id="ch0103/06">
+  var a = Number(prompt("确诊数", ))
+  var b = Number(prompt("死亡数", ))
+  var result= b/a*100
+  console.log(result.toFixed(3)+"%")
+</script>
+
+<script type="x" id="ch0103/07">
+  var x = Number(prompt("X的值", ))
+  var a = Number(prompt("A的值", ))
+  var b = Number(prompt("B的值", ))
+  var c = Number(prompt("C的值", ))
+  var d = Number(prompt("D的值", ))
+  console.log(x**3*a + x**2*b + c*x + d)
+</script>
+
+<script type="x" id="ch0103/08">
+  var a = Number(prompt("华氏温度", ))
+  var result=5 * (a-32) / 9
+  console.log(result.toFixed(5))
+</script>
+
+<script type="x" id="ch0103/09">
+  var r = Number(prompt("半径", ))
+  var pi=3.14159
+  var d = 2*r
+  var c = 2*pi*r
+  var s = pi*r*r
+  console.log(d.toFixed(4)+ " " + c.toFixed(4)+ " " +  s.toFixed(4))
+</script>
+
+<script type="x" id="ch0103/10">
+  var a = Number(prompt("A的电阻", ))
+  var b = Number(prompt("B的电阻", ))
+  var result=1/(1/a  + 1/b)
+  console.log(result.toFixed(2))
+</script>
+
+<script type="x" id="ch0103/11">
+  var a = Number(prompt("A的值", ))
+  var b = Number(prompt("B的值", ))
+  var result=a % b
+  console.log(result.toFixed(4))
+</script>
+
+<script type="x" id="ch0103/12">
+  var r = Number(prompt("半径", ))
+  var v = 4/3*3.14*r*r*r
+  console.log(v.toFixed(2))
+</script>
+
+<script type="x" id="ch0103/13">
+  var a = Number(prompt("A的值", ))
+  s1= (a - a%100)/ 100
+  s2= (a%100 - a%10)/10
+  s3= a%10
+  console.log(String(s3) + String(s2)+ String(s1))
+</script>
+
+<script type="x" id="ch0103/14">
+  var h = Number(prompt("高度", ))
+  var r = Number(prompt("半径", ))
+  x = 20000/ (3.14159 * r * r * h) +0.5
+  console.log(x.toFixed(0))
+</script>
+
+<script type="x" id="ch0103/15">
+  var n = Number(prompt("n的值", ))
+  var x = Number(prompt("x的值", ))
+  var y = Number(prompt("y的值", ))
+  x1 = y/x + 0.5
+  console.log(n - (x1.toFixed(0)))
+</script>
+
+<script type="x" id="ch0103/16">
+  var Xa = Number(prompt("A的值", ))
+  var Ya = Number(prompt("B的值", ))
+  var Xb = Number(prompt("C的值", ))
+  var Yb = Number(prompt("D的值", ))
+  var result=((Yb -Ya)*(Yb - Ya) + (Xb - Xa)*(Xb - Xa))**0.5
+  console.log(result.toFixed(3))
+</script>
+
+<script type="x" id="ch0103/17">
+  var Xa = Number(prompt("A的值", ))
+  var Ya = Number(prompt("B的值", ))
+  var Xb = Number(prompt("C的值", ))
+  var Yb = Number(prompt("D的值", ))
+  var Xc = Number(prompt("E的值", ))
+  var Yc = Number(prompt("F的值", ))
+  var l1 = ((Yb -Ya)*(Yb - Ya) + (Xb - Xa)*(Xb - Xa))**0.5
+  var l2 = ((Yc -Ya)*(Yc - Ya) + (Xc - Xa)*(Xc - Xa))**0.5
+  var l3 = ((Yc -Yb)*(Yc - Yb) + (Xc - Xb)*(Xc - Xb))**0.5
+  var p=(l1 + l2 + l3)/2
+  var s = Math.sqrt(p * (p- l1) * (p - l2) * (p - l3))
+  console.log(s.toFixed(2))
+</script>
+
+<script type="x" id="ch0103/18">
+  var a1 = Number(prompt("a1的值", ))
+  var a2 = Number(prompt("a2的值", ))
+  var n = Number(prompt("n的值", ))
+  console.log(a1 + (n-1)*(a2 - a1))
+
+</script>
+
+<script type="x" id="ch0103/19">
+ var a = Number(prompt("A的值", ))
+ var b = Number(prompt("B的值", ))
+ console.log(a*b)
+</script>
+
+<script type="x" id="ch0103/20">
+  var n = Number(prompt("A的值", ))
+  console.log(2**n)
+</script>
+<!--                                        -->
+
+<script type="x" id="ch0104/01">
+  var n = Number(prompt("N的值", ));
+  if(n > 0){
+  console.log("positive");
+} else if( n = 0){
+  console.log("zero");
+}else{
+  console.log("negative");
+  }
+//  (n>0 ? console.log("positive") : (n=0 ? console.log("zero"): console.log("negative")))
+//   console.log("zhi")
+ </script>
+
+<script type="x" id="ch0104/02">
+  var n = Number(prompt("N的值", ))
+  console.log((n*n)**0.5)
+</script>
+<script type="x" id="ch0104/03">
+  var n = Number(prompt("N的值", ))
+  if (n%2 == 0){
+    console.log("even");
+  } else{
+    console.log("odd");
+  }
+</script>
+
+<script type="x" id="ch0104/04">
+  var n = string(prompt("N的值", ))
+  code = str.charCodeAt(n);
+   console.log(code)       <!--无法得出x的acill码 --> -->
+</script>
+<script type="x" id="ch0104/05">
+  var x = Number(prompt("x的值", ));
+  var y = Number(prompt("y的值", ));
+  if(x > y){
+  console.log(">");
+} else if( x = y ){
+  console.log("=");
+}else{
+  console.log("<");
+  }
+</script>
+
+<script type="x" id="ch0104/06">
+  var n = Number(prompt("n的值", ));
+  if(n >=10&& n<=99){
+  console.log("1");
+} else{
+  console.log("0");
+  }
+</script>
+<script type="x" id="ch0104/07">
+  var n = Number(prompt("n的值", ));
+  var m = Number(prompt("m的值", ));
+  if(n >=10 || n>=20){
+  console.log("1");
+} else{
+  console.log("0");
+  }
+</script>
+
+<script type="x" id="ch0104/08">
+  var n = Number(prompt("n的值", ));
+  if((n % 3 == 0)&&(n % 5 == 0)){
+  console.log("YES");
+} else{
+  console.log("NO");
+  }
+</script>
+<script type="x" id="ch0104/09">
+  var x = Number(prompt("x的值", ));
+  var y = Number(prompt("y的值", ));
+  if(x > y){
+  console.log(">");
+} else if( x = y ){
+  console.log("=");
+}else if( x < y ){
+  console.log("<");
+}else{
+  console.log("n");
+  }
+</script>
+
+<script type="x" id="ch0104/10">
+
+</script>
+<script type="x" id="ch0104/11">
+
+</script>
+
+<script type="x" id="ch0104/12">
+
+</script>
+<script type="x" id="ch0104/13">
+
+</script>
+
+<script type="x" id="ch0104/14">
+
+</script>
+
+<script type="x" id="ch0104/15">
+
+</script>
+<script type="x" id="ch0104/16">
+
+</script>
+
+<script type="x" id="ch0104/17">
+
+</script>
+<script type="x" id="ch0104/18">
+
+</script>
+
+<script type="x" id="ch0104/19">
+
+</script>
+<script type="x" id="ch0104/20">
+
+</script>
+<script type="x" id="ch0104/21">
+
+</script>
+
+
+<!--  ------------------------------------- -->
+<script type="x" id="ch0105/01">
+
+</script>
