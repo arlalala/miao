@@ -157,12 +157,12 @@
   var n = Number(prompt("N的值", ));
   if(n > 0){
   console.log("positive");
-} else if( n = 0){
+}else if( n = 0){
   console.log("zero");
 }else{
   console.log("negative");
   }
-//  (n>0 ? console.log("positive") : (n=0 ? console.log("zero"): console.log("negative")))
+//  (n>0 ? console.log("positive") : (n==0 ? console.log("zero"): console.log("negative")))
 //   console.log("zhi")
  </script>
 
@@ -180,9 +180,13 @@
 </script>
 
 <script type="x" id="ch0104/04">
-  var n = string(prompt("N的值", ))
-  code = str.charCodeAt(n);
-   console.log(code)       <!--无法得出x的acill码 --> -->
+  var n = String(prompt())
+  var result= n.charCodeAt(0)
+  if (result%2 == 0){
+    console.log("NO");
+  } else{
+    console.log("YES");
+  }
 </script>
 <script type="x" id="ch0104/05">
   var x = Number(prompt("x的值", ));
@@ -224,58 +228,154 @@
 </script>
 <script type="x" id="ch0104/09">
   var x = Number(prompt("x的值", ));
-  var y = Number(prompt("y的值", ));
-  if(x > y){
-  console.log(">");
-} else if( x = y ){
-  console.log("=");
-}else if( x < y ){
-  console.log("<");
+  if(x%3==0&&x%5==0&&x%7==0){
+  console.log("3 5 7");
+}else if( x%3==0&&x%5==0){
+  console.log("3 5");
+}else if( x%5==0&&x%7==0 ){
+  console.log("5 7");
+}else if( x%3==0&&x%7==0 ){
+  console.log("3 7");
 }else{
   console.log("n");
   }
 </script>
 
 <script type="x" id="ch0104/10">
-
+  var n = Number(prompt("n的值", ));
+  var m = Number(prompt("m的值", ));
+  if(n >=60 && m >= 60 ||m < 60 && n<60){
+  console.log("0");
+} else{
+  console.log("1");
+  }
 </script>
 <script type="x" id="ch0104/11">
-
+  var n = Number(prompt("n的值", ));
+  if(n==1 || n==3 || n==5){
+  console.log("NO");
+} else{
+  console.log("YES");
+  }
 </script>
 
 <script type="x" id="ch0104/12">
-
+  var n = Number(prompt("n的值", ));
+  if(n>100){
+    console.log("Bike");
+  } else if  (n= 100){
+    console.log("All");
+    }
+    else{
+      console.log("Walk");
+}
 </script>
 <script type="x" id="ch0104/13">
-
+  var x = Number(prompt("x的值", ));
+  if(x>=0&&x < 5){
+       console.log((-x + 2.5).toFixed(3));
+  }else if(x >=5&&x < 10 ){
+  console.log((2- 1.5 *(x-3)*(x-3)).toFixed(3));
+    }
+else{
+  console.log((x/2 - 1.5).toFixed(3));
+}
 </script>
 
 <script type="x" id="ch0104/14">
+  var x = Number(prompt("x的值", ));
+  var z = prompt("y的值", );
+  if(x<1000){
+  var s1 = 8;
+}else{
+  var s1 = 8 + parseInt((x-500)/500)*4;
+ }
+  if(z == "y"){
+    var s2= 5;
+  }else{
+    var s2= 0;
+  }
+  console.log(s1+s2)
 
 </script>
 
 <script type="x" id="ch0104/15">
-
+  var n = Number(prompt("n的值", ));
+  var m = Number(prompt("m的值", ));
+  var p = Number(prompt("p的值", ));
+  console.log(Math.max(n,m,p))
 </script>
 <script type="x" id="ch0104/16">
-
+  var n = Number(prompt("n的值", ));
+  var m = Number(prompt("m的值", ));
+  var p = Number(prompt("p的值", ));
+  if(n+m>p||n+p>m||p+m>n){
+    console.log("yes");
+  }else{
+    console.log("no");
+   }
 </script>
 
 <script type="x" id="ch0104/17">
-
+  var n = Number(prompt("n的值", ));
+  if(n %400 == 0||n%4 ===0&& n %100 !==0 ){
+    console.log("Y");
+  } else{
+    console.log("N");
+    }
 </script>
 <script type="x" id="ch0104/18">
-
+  var n = Number(prompt("n的值", ));
+  var m = Number(prompt("m的值", ));
+  if(n <=1&&m <=1 ){
+    console.log("yes");
+  } else{
+    console.log("no");
+    }
 </script>
 
 <script type="x" id="ch0104/19">
-
+  var n = Number(prompt("n的值", ));
+  var m = Number(prompt("m的值", ));
+  var t = prompt("t的值", )
+      if(t == "+"){
+        console.log(n+m);
+    }else if(t == "-"){
+    console.log(n+m);
+    }else if(t == "*"){
+      console.log(n*m);
+    }else if(t == "/"){
+        console.log(n/m);
+    }else{
+    console.log("Invalid operator!");
+    }
 </script>
 <script type="x" id="ch0104/20">
-
+  var a = Number(prompt("a的值", ));
+  var b = Number(prompt("b的值", ));
+  var c = Number(prompt("c的值", ));
+  var delta = b * b - 4 * a * c
+  var sqrtdelta = Math.sqrt(delta)
+  var sdelta = Math.sqrt(4 * a * c - b * b)
+  var x1 = ((-b + sqrtdelta)/(2 * a)).toFixed(5)
+  var x2 = ((-b - sqrtdelta)/(2 * a)).toFixed(5)
+  var u1 = (-b / (2*a)).toFixed(5)
+  var u2 = (sdelta / (2*a)).toFixed(5) + "i"
+  var u3 = u1 + "+" + u2
+  var u4 = u1 + "-" + u2
+  if(delta == 0){
+    console.log("x1=x2=" + x1);
+}else if(delta > 0){
+    console.log("x1=" + x1 + ";" + "x2=" + x2);
+}else{
+console.log("x1=" + u3 + ";" +"x2=" + u4);
+}
 </script>
 <script type="x" id="ch0104/21">
-
+  var n = Number(prompt("n的值", ));
+  var x = Number(prompt("x的值", ));
+  var y = Number(prompt("y的值", ));
+  console.log(n- parseInt((y/x)) -1);
 </script>
 
 
