@@ -304,6 +304,7 @@ else{
   var m = Number(prompt("m的值", ));
   var p = Number(prompt("p的值", ));
   console.log(Math.max(n,m,p))
+
 </script>
 <script type="x" id="ch0104/16">
   var n = Number(prompt("n的值", ));
@@ -381,5 +382,413 @@ console.log("x1=" + u3 + ";" +"x2=" + u4);
 
 <!--  ------------------------------------- -->
 <script type="x" id="ch0105/01">
+  var n = Number(prompt())
+  var sum = 0
+  for (var i=1;i<=n;i++){
+    var a = Number(prompt())
+    sum += a
+  }
+  console.log((sum/n).toFixed(2))
+  var n = Number(prompt())
+  var sum = 0
+  var counte=0
+  while (counte<n){
+
+  }
+</script>
+<script type="x" id="ch0105/02">
+  var sum =0
+  for (var i=1;i<=12;i++){
+    var a =Number(prompt())
+    sum += a
+  }
+  console.log("$" + (sum/12).toFixed(2))
+</script>
+<script type="x" id="ch0105/03">
+  var n = Number(prompt())
+  var sum =0
+  for (var i=1;i<=n;i++){
+  var a = Number(prompt())
+  sum += a
+  }
+  console.log((sum/n).toFixed(4))
+</script>
+<script type="x" id="ch0105/04">
+  var n = Number(prompt())
+  var sum = 0
+  for (var i=1;i<=n;i++){
+    var a = Number(prompt())
+    sum += a
+  }
+  console.log(sum ,(sum/n).toFixed(5))
+</script>
+<script type="x" id="ch0105/05">
+  var n = Number(prompt())
+  var s = 0
+  for (var i=1;i<=n;i++){
+    var a = Number(prompt())
+    if( a > s){
+      var s = a
+    }
+  }
+  console.log(s)
+</script>
+<script type="x" id="ch0105/06">
+var n = Number(prompt())
+  var sm = 0
+  var la = 0
+  for (var i=1;i<=n;i++){
+    var a = Number(prompt())
+    if( a > la){
+      var la = a
+    }
+    if( a < sm){
+      var sm = a
+    }
+  }
+  console.log(la-sm)
+</script>
+<script type="x" id="ch0105/07">
+  var n = Number(prompt())
+  var suma = 0
+  var sumb = 0
+  var sumc = 0
+  for (var i=1;i<=n;i++){
+    var a = Number(prompt())
+    var b = Number(prompt())
+    var c = Number(prompt())
+    suma += a
+    sumb += b
+    sumc += c
+  }
+  console.log(suma , sumb , sumc , (suma + sumb + sumc))
+</script>
+<script type="x" id="ch0105/08">
+ var n = Number(prompt())
+ var sum = 0
+ var all = (n-2)*180
+ for(var i=1;i<n;i++){
+  var a = Number(prompt())
+  sum += a
+ }
+console.log(all -sum)
+</script>
+<script type="x" id="ch0105/09">
+ var m = Number(prompt())
+ var n = Number(prompt())
+ var sum = 0
+ for(var m1= m + (m+1)%2 ;m1 <= n;m1 += 2){
+  sum += m1
+ }
+console.log(sum)
+</script>
+<script type="x" id="ch0105/10">
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var sum = 0
+  for(var m1 = m - m%17 +17 ;m1 <= n;m1 += 17){
+    sum += m1
+   }
+  console.log(sum)
+</script>
+<script type="x" id="ch0105/11">
+  var k = Number(prompt())
+  var s1 = 0
+  var s2 = 0
+  var s3 = 0
+  for(var i=1;i<=k;i++){
+   var n = Number(prompt())
+               if (n==1){
+    s1++;}else if (n==5){
+    s2++;}else if (n==10){
+    s3++;}
+  }
+    console.log(s1 ,s2 ,s3)
+</script>
+<script type="x" id="ch0105/12">
+  var N = Number(prompt())
+  var m = Number(prompt())
+  var s = 0
+  for(var i=1;i<=N;i++){
+    var a = Number(prompt())
+    if (m==a){
+    s++;
+  }
+}
+  console.log(s)
+</script>
+<script type="x" id="ch0105/13">
+  var a = Number(prompt())
+  var n = Number(prompt())
+  var s = 1
+  for(var i=1;i<=n;i++){
+   s *= a
+  }
+  console.log(s)
+</script>
+<script type="x" id="ch0105/14">
+  var x = Number(prompt())
+  var n = Number(prompt())
+  var s = 1
+  for(i=1;i<=n;i++){
+   s *= 1.001
+  }
+  var result = (x * s).toFixed(4)
+  console.log(result)
+</script>
+<script type="x" id="ch0105/15">
+  var R = Number(prompt())
+  var M = Number(prompt())
+  var Y = Number(prompt())
+  var counter = 1
+  while (counter<= Y){
+    M *= (1+R/100)
+    counter++
+  }
+  console.log(Math.trunc(M))
+
+</script>
+<script type="x" id="ch0105/16">
+  debugger
+  var N = Number(prompt())
+  var K = Number(prompt())
+  var money = N
+  var price = 200
+  for (i=1;;i++){
+    money = money + N
+    price = price * (1 + K/100)
+    if (money > price)
+    break ; }
+  console.log(i+1)
+
+</script>
+
+<script type="x" id="ch0105/17">
+  var k= Number(prompt())
+  var a = 1
+  var b = 1
+  if (k <=2 ) {
+    console.log(1)
+  } else {
+    for (i = 1;i <= (k-2);i++){
+      var c = a + b
+      a = b
+      b = c
+    }
+    console.log(b)
+  }
+
+</script>
+<script type="x"  id="ch0105/18">
+  var n = Number(prompt())
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var cue1 = b/a
+ for (i=1;i<=n-1;i++){
+  var c = Number(prompt())
+  var d = Number(prompt())
+    var cue2 = cue1 - d/c
+    if (cue2 > 0.05){
+  console.log("worse")
+ } else if (cue2 < -0.05){
+  console.log("better")
+ } else {
+  console.log("same")
+ }
+ }
+
+</script>
+<script type="x" id="ch0105/19">
+  var n = Number(prompt())
+  for (i=1;i<=n;i++){
+    var a = Number(prompt())
+    var b = Number(prompt())
+    var c = Number(prompt())
+    var t=2*((a * a + b * b)**0.5 )/50 + 1.5*c
+    console.log(Math.ceil(t))
+  }
+
+</script>
+<script type="x" id="ch0105/20">
+  var h= Number(prompt())
+  var u= h
+  var sum = u
+   for (i=1;i<=9;i++){
+    u = u/2
+    sum = 2*u +sum
+  }
+  console.log(sum.toFixed(4));
+  for (i=1;i<=10;i++){
+    h = h/2
+  } console.log(h.toFixed(7))
+
+
+</script>
+<script type="x" id="ch0105/21">
+  var N = Number(prompt())
+  for (var i=N;i!=1;i=N){
+    if (N % 2 === 0){
+   console.log (N + "/2="+ N/2)
+    N /= 2
+    } else {
+   console.log (N + "*3+1=" + (N*3+1))
+      N = N*3 + 1
+    }
+  }
+    console.log ("End");
+</script>
+<script type="x" id="ch0105/22">
+  debugger
+  var sheng = 0
+  var cun = 0
+  for (var i=1;i<=12;i++){
+  var Y = Number(prompt())
+      if(Y <= 300+ sheng)
+      cun = cun + 100 * Math.floor((300 + sheng - Y)/100) //问题是如果Y大于剩余+300时，会取钱
+    else{
+      console.log (-i)
+      break;
+    }
+    sheng = 300 + sheng - Y - 100 * Math.floor((300 + sheng - Y)/100);
+    if (i==12){
+  console.log (sheng + cun*1.2)
+  }
+  }
+
+</script>
+<script type="x" id="ch0105/23">
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var sheng = m
+  var refuse = 0
+  for (var i=1;i<=n;i++){
+  var xuqiu = Number(prompt())
+  if (sheng >=0){
+    sheng = sheng - xuqiu
+  }
+  if (sheng< 0){
+    sheng = sheng + xuqiu
+    refuse= refuse +1
+  }
+}
+  console.log(refuse)
+</script>
+<script type="x" id="ch0105/24">
+
+</script>
+<script type="x" id="ch0105/25">
+
+</script>
+<script type="x" id="ch0105/26">
+
+</script>
+<script type="x" id="ch0105/27">
+
+</script>
+<script type="x" id="ch0105/28">
+
+</script>
+<script type="x" id="ch0105/29">
+
+</script>
+<script type="x" id="ch0105/30">
+
+</script>
+<script type="x" id="ch0105/31">
+
+</script>
+<script type="x" id="ch0105/32">
+
+</script>
+<script type="x" id="ch0105/33">
+
+</script>
+<script type="x" id="ch0105/34">
+
+</script>
+<script type="x" id="ch0105/35">
+
+</script>
+<script type="x" id="ch0105/36">
+
+</script>
+<script type="x" id="ch0105/37">
+
+</script>
+<script type="x" id="ch0105/38">
+
+</script>
+<script type="x" id="ch0105/39">
+
+</script>
+<script type="x" id="ch0105/40">
+
+</script>
+<script type="x" id="ch0105/41">
+
+</script>
+<script type="x" id="ch0105/42">
+
+</script>
+<script type="x" id="ch0105/43">
+
+</script>
+<script  type="x"  id="ch0105/44">
+  debugger
+var n = Number(prompt())
+var b = 0
+ for (i=2;;i++){
+   for (a=2;a<i;a++){
+    if (i % a == 0)
+    break;}
+    if (a == i){
+    b++;}
+    if (b == n){
+    break;}
+ }
+ console.log(i)
+</script>
+<script type="x" id="ch0105/45">
+
+</script>
+
+
+
+
+
+
+
+
+<script type="x" id="ch0105/46">
+
+</script>
+<script type="x" id="ch0105/47">
+
+</script>
+<script type="x" id="ch0105/48">
+
+</script>
+<script type="x" id="ch0105/49">
+
+</script>
+<script type="x" id="ch0105/50">
+
+</script>
+<script type="x" id="ch0105/51">
+
+</script>
+<script type="x" id="ch0105/52">
+
+</script>
+<script type="x" id="ch0105/01">
+
+</script>
+<script type="x" id="ch0105/02">
+
+</script>
+<script type="x" id="ch0105/03">
+
+</script>
+<script type="x" id="ch0105/04">
 
 </script>
