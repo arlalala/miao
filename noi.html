@@ -954,7 +954,9 @@ console.log(sum)
   for (var j = 0;j < m;j ++){
     for (var i = 0;i < n;i ++) {
         l += content
-
+    }
+    if (j == (m-1)){
+      break
     }
     l += '\n'
   }
@@ -968,9 +970,12 @@ console.log(sum)
               if (i == 0 || i ==( n - 1)){
               l += content
               } else {
-                l += " "
+                l += ' '
               }
       }
+    }
+    if (j == (m-1)){
+      break
     }
     l += '\n'
   }
