@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+      background-color:rgba(0, 0, 0, 0.08);
+    }
+  </style>
+</head>
+<body>
+  <canvas width="500" height="400"></canvas>
+</body>
+<script>
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated' //放大时的插帧方式：不插帧，直接放大像素
+  var ctx = canvas.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    x = Math.round(x)
+    y = Math.round(y)
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+  /**
+   * YOUR TASK
+      * 在 坐标 (42, 42) 画出一个点
+      * 画一条实线
+      * 画一条一个实点一个空点的虚线
+      * 画一条两个实点两个空点的虚线
+      * 画一条三个实点两个空点的虚线
+      * 画一条45度的斜线
+      * 画一条30度的斜线（与x轴或y轴的夹角呈30度）
+      * 画一条跨越画布左上角和右下角的对角线
+      * 画一个空心矩形
+      * 画一个实心矩形
+      * 画两个个空心的圆，居中：
+        * 一个半径为50像素
+        * 一个半径为200像素
+      * 画一个实心的圆，半径至少为100像素
+      * 画一个【大小合适】的sin(x)的图像
+
+      * 画出rgb色彩空间的某一面（尺寸要大于100x100）
+         'rgb(255,255,0)'
+         '#ff00ff'
+        如果做出上一题后，尝试将其每个点的坐标乘以一个矩阵（如(2,0,0,2)或(1,0.27得到新的位置，即绘制出被线性变幻后的色彩空间某一面
+        可以考虑如下几种矩阵：
+           2 0
+           0 2
+           ------
+           1  0.27
+           0  1
+           ------
+           0.5    0.87
+           -0.87  0.5
+
+   */
+</script>
+<script>
+  // 不可更改上面的代码
+  // 你的代码写在这里
+  // YOUR CODE GOES BELOW
+
+
+
+ //点
+  dot(42, 42,"red")
+  //实线
+  for(i = 0; i <= 400 ; i ++){
+  dot( i, 10, "red" )
+  }
+  //虚线
+  for(i = 0; i <= 400 ; i+= 2){
+  dot( i, 20, "red" )
+  }
+  //两个实点两个空点的虚线
+  for(i = 0; i <= 400 ; i+= 1){
+  // dot( i, 30, "red" )
+  // dot( (i+1) , 30, "red" )
+  //使用if语句简化如下
+  if (i % 4 < 2){
+    dot( i, 30, "red" )
+  }
+  }
+  //三个实点两个空点的虚线
+  for(i = 0; i <= 400 ; i+= 1){
+    if(i % 5 < 3){
+  dot( i, 40, "red" )
+
+    }
+  }
+  //45度的斜线
+  for(i = 0; i <= 300 ; i+= 1){
+  dot( i, i, "black" )
+  }
+   //30度的斜线
+   for(i = 0; i <= 400 ; i+= 1){
+  dot( i, i * 0.5 , "black" )
+  }
+  //跨越画布左上角和右下角的对角线
+  for(i = 0; i <= 500 ; i+= 1){
+  dot( i, i * 0.8 , "black" )
+  }
+  //空心矩形
+  for(i = 250; i <= 290 ; i+= 1){
+    for (j = 45; j <= 70; j++ ){
+      if (i == 250 || i == 290|| j== 45 || j == 70)
+    dot( i, j , "blue" )
+  }
+  }
+  //实心矩形
+  for(i = 200; i <= 240 ; i+= 1){
+    for (j = 45; j <= 70; j++ ){
+    dot( i, j , "blue" )
+  }
+  }
+  //圆半径为50像素
+  // for(i = -50; i <= 50 ; i+= 1){
+  //   for (j = -50; j <= 50 ;j++ ){
+  //     if (Math.sqrt(i**2 + j **2 ) == 50 )
+  //   dot( i, j , "blue" )
+  // }
+  // }
+  //取点太少，思路应该为函数，而不是找点 从圆形公式(x-a)²+ (y-b)²=r²  入手
+  for(i = 200; i <= 300 ; i+= 0.1){
+    for (j = 150; j <= 250 ;j +=0.1 ){
+    if (Math.sqrt((i- 250)**2 + (j - 200 ) **2 ) <50.1 && Math.sqrt((i- 250)**2 + (j - 200 ) **2 ) > 49.9 )
+    dot( i, j , "blue" )
+    }
+  }
+
+  //圆半径为200像素
+  for(i = 50; i <= 450 ; i+= 0.1){
+    for (j = 1; j <= 400 ;j+=0.1 ){
+    if (Math.sqrt((i- 250)**2 + (j - 200 ) **2 ) < 200 && Math.sqrt((i- 250)**2 + (j - 200 ) **2 ) > 199.5)
+    dot( i, j , "rgba(255,0 ,255)" )
+    }
+  }
+  //实心圆
+  for(i = 290 ;i <= 490 ; i+= 0.1){
+    for (j = 150; j <= 350 ;j +=0.1 ){
+    if (Math.sqrt((i- 390)**2 + (j - 250 ) **2 ) <100.1)
+    dot( i, j , "yellow" )
+  }
+  }
+  //sin(x)曲线
+  debugger
+  for(i = 50 ;i <= 200 ; i+= 0.01){
+    for (j = 200; j <= 250 ;j +=1 ){
+    if ((Math.sin((i- 50)/10)) - (j - 225)/25 < 0.01 && (Math.sin((i- 50)/10)) - (j - 225)/25 > -0.01 )
+    dot( i, j , "black" )
+  }
+  }
+  //未知原因 不能画点 ！！ 原因是js 未收录sin 计算 ，使用Math.sin 解决
+  // for(i = 100 ;i <= 200 ; i+= 0.1){
+  //   for (j = 200; j <= 250 ;j +=0.1 ){
+  //   if (sin(i- 100)==0 )
+  //   dot( i, j , "black" )
+  // }
+  // }
+  //色彩空间的一面
+  //需要用字符串拼接rgba 的内容。
+  var a = 0
+  var b = 0
+  var c = 0
+  var d
+  for(i = 300; i <= 400 ; i+= 1){
+    for (j = 150; j>=50; j-- ){
+      a = (i - 300)*255/100
+      b = (j)*255/100
+      c = (i - 300)*255/100
+      d = "rgba(" + a + "," + b + "," + c + ")"
+    dot( i, j , d)
+    dot( 2 * i ,2 * j , d)
+  }
+  }
+  //矩阵： 2 0 0 2
+  var a = 0
+  var b = 0
+  var c = 0
+  var d
+  for(i = 300; i <= 400 ; i+= 1){
+    for (j = 150; j>=50; j-- ){
+      a = (i - 300)*255/100
+      b = (j)*255/100
+      c = (i - 300)*255/100
+      d = "rgba(" + a + "," + b + "," + c + ")"
+    dot( i, j , d)
+    dot( 2 * i ,2 * j , d)
+  }
+  }
+</script>
+</html>
