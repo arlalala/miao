@@ -1,6 +1,4 @@
-
 var arlalala= {
-
   chunk: function (nums, k) {
     if (nums.length <= k) {
       return nums
