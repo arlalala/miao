@@ -25,8 +25,53 @@ var arlalala= {
       }
     }
     return a
-},
+  },
+  difference(array, ary =[values]) {
+    var a = []
+    for (var i = 0; i < array.length; i++){
+      if (!(array[i] in ary)) {
+          a.push(array[i])
+      }
+    }
+    return a
+  },
+  differenceBy(array,  ary =[values], iteratee = _.identity) {
+    var arraya = iteratee(array)
+    var arya = iteratee(ary)
 
+    var a = []
+    for (var i = 0; i < arraya.length; i++){
+      if (!(arraya[i] in arya)) {
+          a.push(array[i])
+      }
+    }
+    return a
+  },
+  drop(array, n = 1) {
+    if (n > array.length) {
+        return []
+    }
+    var a = []
+    for (var i = 0; i < array.length; i++){
+      if (i >= n) {
+        a.push(array[i])
+      }
+    }
+    return a
+  },
+  dropRight(array, n = 1) {
+    if (n > array.length) {
+      return []
+    }
+    var a = []
+    for (var i = 0; i < n; i++){
+      a.push(array[i])
+    }
+    return a
+  },
+  dropRightWhile(array, predicate = _.identity) {
+
+  }
 fill: function() {},
 
 }
