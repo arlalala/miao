@@ -8,7 +8,7 @@ var arlalala= {
            var  n = i / k
            numsa[n] = []
         for (var j = 0; j < k; j++){
-           numsa[n][j] = nums[j +k * i]
+           numsa[n].push (nums[j + k * n])
         }
       }
     }
@@ -62,7 +62,7 @@ var arlalala= {
       return []
     }
     var a = []
-    for (var i = 0; i < n; i++){
+    for (var i = 0; i <array.length - n; i++){
       a.push(array[i])
     }
     return a
