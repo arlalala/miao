@@ -8,7 +8,7 @@ var arlalala= {
       var numsa = []
       for (var i = 0; i < nums.length; i = i + k){
            var  n = i / k
-           var numsa[n] = []
+           numsa[n] = []
         for (var j = 0; j < k; j++){
            numsa[n][j] = nums[j +k * i]
         }
@@ -17,7 +17,15 @@ var arlalala= {
     return numsa
 },
 
-compact: function() {},
+  compact: function (nums) {
+    var a =[]
+    for (var i = 0; i < nums.length; i++){
+      if (nums[i]) {
+        a.push(nums[i])
+      }
+    }
+    return a
+},
 
 fill: function() {},
 
