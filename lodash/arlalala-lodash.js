@@ -1,19 +1,21 @@
 var arlalala= {
-  chunk: function (nums, k) {
-    if (nums.length <= k) {
-      return nums
-    } else {
-      var numsa = []
-      for (var i = 0; i < nums.length; i = i + k){
-           var  n = i / k
-           numsa[n] = []
-        for (var j = 0; j < k; j++){
-           numsa[n].push (nums[j + k * n])
-        }
+  chunk: function(array, size) {
+      var result = []
+      var index = 0
+      for (var i = 0; i < array.length - 1; i++) {
+          if (!array[index]) {
+              return result
+          }
+          result[i] = []
+          for (var j = 0; j < size; j++) {
+              if (!array[index]) {
+                  return result
+              }
+              result[i][j] = array[index]
+              index++
+          }
       }
-    }
-    return numsa
-},
+  },
 
   compact: function (nums) {
     var a =[]
@@ -95,5 +97,23 @@ var arlalala= {
     }
     return  array
   },
+  findIndex: function (array, predicate = _.identity, fromIndex = 0) {
+    for (var i = fromIndex; i < array.length; i++){
+      if (!predicate(array[i])) {
+         return  i
+       }
+    }
+    return  -1
+  },
+  findIndex: function (array, predicate = _.identity, fromIndex = array.length -1) {
+    for (var i = fromIndex; i >=0; i--){
+      if (!predicate(array[i])) {
+         return  i
+       }
+    }
+    return  -1
+  },
+  flatten: function (array) {
 
+  },
 }
