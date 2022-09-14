@@ -24,7 +24,7 @@ var arlalala= {
     }
     return a
   },
-  difference(array, ary =[values]) {
+  difference: function(array, ary =[values]) {
     var a = []
     for (var i = 0; i < array.length; i++){
       if (!(array[i] in ary)) {
@@ -33,7 +33,7 @@ var arlalala= {
     }
     return a
   },
-  differenceBy(array,  ary =[values], iteratee = _.identity) {
+  differenceBy: function(array,  ary =[values], iteratee = _.identity) {
     var arraya = iteratee(array)
     var arya = iteratee(ary)
 
@@ -45,7 +45,7 @@ var arlalala= {
     }
     return a
   },
-  drop(array, n = 1) {
+  drop: function(array, n = 1) {
     if (n > array.length) {
         return []
     }
@@ -57,7 +57,7 @@ var arlalala= {
     }
     return a
   },
-  dropRight(array, n = 1) {
+  dropRight: function(array, n = 1) {
     if (n > array.length) {
       return []
     }
@@ -67,7 +67,7 @@ var arlalala= {
     }
     return a
   },
-  dropRightWhile(array, predicate = _.identity) {
+  dropRightWhile: function(array, predicate = _.identity) {
     var a = []
     for (var i = 0; i < array.length; i++){
       if (predicate(array[i], i, array)) {
@@ -77,7 +77,7 @@ var arlalala= {
       }
     }
   },
-  dropWhile(array, predicate = _.identity) {
+  dropWhile: function(array, predicate = _.identity) {
     var a = []
     for (var i = 0; i < array.length; i++){
       if (predicate(array[i], i, array) == false) {
@@ -89,6 +89,11 @@ var arlalala= {
     }
     return  a
   },
-fill: function() {},
+  fill: function (array, value, start = 0, end = array.length) {
+    for (var i = start; i < end; i++){
+      array[i] = value
+    }
+    return  array
+  },
 
 }
