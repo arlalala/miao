@@ -79,6 +79,18 @@ var arlalala= {
       }
     }
   },
+  dropWhile(array, predicate = _.identity) {
+    var a = []
+    for (var i = 0; i < array.length; i++){
+      if (predicate(array[i], i, array) == false) {
+        var k = i
+        for (var j = k + 1; j < array.length; j++){
+          a.push(array[j])
+        }
+       }
+    }
+    return  a
+  },
 fill: function() {},
 
 }
