@@ -70,15 +70,8 @@ var arlalala= {
     return a
   },
   dropRightWhile(array, predicate = _.identity) {
-    var a = []
-    for (var i = 0; i < array.length; i++){
-      if (predicate(array[i], i, array)) {
-        a.push(array[i])
-      } else {
-        return a
-      }
-    }
-  },
+
+  }
 fill: function() {},
 
 }
