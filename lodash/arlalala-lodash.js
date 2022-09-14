@@ -70,7 +70,7 @@ var arlalala= {
   dropRightWhile: function(array, predicate = _.identity) {
     var a = []
     for (var i = 0; i < array.length; i++){
-      if (predicate(array[i], i, array)) {
+      if (predicate(array[i],  array)) { // 删除了i
         a.push(array[i])
       } else {
         return a
@@ -80,7 +80,7 @@ var arlalala= {
   dropWhile: function(array, predicate = _.identity) {
     var a = []
     for (var i = 0; i < array.length; i++){
-      if (predicate(array[i], i, array) == false) {
+      if (predicate(array[i],  array) == false) {  // 删除了i
         var k = i
         for (var j = k + 1; j < array.length; j++){
           a.push(array[j])
