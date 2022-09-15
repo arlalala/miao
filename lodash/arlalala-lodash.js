@@ -148,19 +148,11 @@ var arlalala= {
   },
   indexOf: function (array , value, fromIndex = 0) {
     var len = array.length
-    if (fromIndex >= 0) {
       for (var i = fromIndex; i < len; i++){
         if (array[i] == value) {
           return i
         }
       }
-    } else {
-      for (var i = fromIndex +len; i < len ; i++){
-        if (array.at(fromIndex) == value) {
-          return  i
-        }
-      }
-    }
     return -1
   },
   initial: function(array) {
@@ -176,7 +168,7 @@ var arlalala= {
   join: function(array, separator = ',') {
     var result = ""
     for (var i = 0; i < array.length; i++){
-       result += array[i] + separator
+       result += array[i] + "" +separator
     }
     return result
   },
@@ -191,16 +183,58 @@ var arlalala= {
     }
     return -1
   },
-  pull: function (array, values) {
-    var a = []
+  pull: function (array, ...values) {
     for (var i = 0; i < array.length; i++){
-      if (array[i] != values) {
-        a.push(array[i])
+      if (values.includes(array[i])) {
+        array.splice(i, 1)
+        i--
       }
     }
-    return a
+    return array
   },
   reverse: function (array) {
-
+    for (var i = 0; i < array.length / 2; i++){
+      var char = array[i]
+      array[i] = array[array.length - 1 - i]
+      array[array.length - 1 - i] = char
+    }
+    return array
+  },
+  sortedIndex: function (array, value) {
+    for (var i = 0; i < array.length; i++){
+      if (array[i] >= value) {
+          return i
+      }
+    }
+  },
+  union: function (...arrays) {
+    var result = []
+    var a = {}
+    for (var i = 0; i < arrays.length; i++){
+      for (var j = 0; j < arrays[i].length; j++){
+        if (!(array[i][j] in a)) {
+          a[array[i][j]] = 0
+          result.push(array[i][j])
+        }
+        a[array[i][j]]++
+      }
+    }
+    return result
+  },
+  uniq: function (array) {
+    var a ={}
+    var result = []
+    for (var i = 0; i < array.length; i++){
+      if (!(array[i] in a)) {
+        a[array[i]] = 0
+        result.push(array[i])
+      }
+      a[array[i]]++
+    }
+    return result
+  },
+  unzip: function (array) {
+    
   }
+
 }
