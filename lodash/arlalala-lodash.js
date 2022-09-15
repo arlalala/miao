@@ -105,7 +105,7 @@ var arlalala= {
     }
     return  -1
   },
-  findIndex: function (array, predicate = _.identity, fromIndex = array.length -1) {
+  findLastIndex: function (array, predicate = _.identity, fromIndex = array.length -1) {
     for (var i = fromIndex; i >=0; i--){
       if (!predicate(array[i])) {
          return  i
@@ -150,14 +150,14 @@ var arlalala= {
     var len = array.length
     if (fromIndex >= 0) {
       for (var i = fromIndex; i < len; i++){
-        if (array[i] = value) {
+        if (array[i] == value) {
           return i
         }
       }
     } else {
-      for (var i = fromIndex; -i > -array.length ; i--){
+      for (var i = fromIndex +len; i < len ; i++){
         if (array.at(fromIndex) == value) {
-          return len + i
+          return  i
         }
       }
     }
@@ -171,6 +171,36 @@ var arlalala= {
     return a
   },
   intersection: function (...array) {
+
+  },
+  join: function(array, separator = ',') {
+    var result = ""
+    for (var i = 0; i < array.length; i++){
+       result += array[i] + separator
+    }
+    return result
+  },
+  last: function (array) {
+    return array.at(-1)?array.at(-1) : undefined
+  },
+  lastIndexOf: function(array, value, fromIndex = array.length - 1) {
+    for (var i = fromIndex; i >= 0; i--){
+      if (array[i] == value) {
+        return i
+      }
+    }
+    return -1
+  },
+  pull: function (array, values) {
+    var a = []
+    for (var i = 0; i < array.length; i++){
+      if (array[i] != values) {
+        a.push(array[i])
+      }
+    }
+    return a
+  },
+  reverse: function (array) {
 
   }
 }
