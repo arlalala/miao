@@ -155,11 +155,21 @@ var arlalala= {
       }
     } else {
       for (var i = fromIndex; -i > -array.length ; i--){
-        if (array.at(fromIndex) = value) {
+        if (array.at(fromIndex) == value) {
           return array.length + i
         }
       }
     }
     return -1
   },
+  initial: function(array) {
+    var a = []
+    for (var i = 0; i < array.length-1; i++){
+      a.push(array[i])
+    }
+    return a
+  },
+  intersection: function (...arrays) {
+
+  }
 }
