@@ -146,9 +146,10 @@ var arlalala= {
   head: function (array) {
     return array[0]? array[0] : undefined
   },
-  indexOf: function(array, value, fromIndex = 0) {
+  indexOf: function (array , value, fromIndex = 0) {
+    var len = array.length
     if (fromIndex >= 0) {
-      for (var i = fromIndex; i < array.length; i++){
+      for (var i = fromIndex; i < len; i++){
         if (array[i] = value) {
           return i
         }
@@ -156,7 +157,7 @@ var arlalala= {
     } else {
       for (var i = fromIndex; -i > -array.length ; i--){
         if (array.at(fromIndex) == value) {
-          return array.length + i
+          return len + i
         }
       }
     }
@@ -169,7 +170,7 @@ var arlalala= {
     }
     return a
   },
-  intersection: function (...arrays) {
+  intersection: function (...array) {
 
   }
 }
