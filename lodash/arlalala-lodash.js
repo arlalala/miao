@@ -26,7 +26,7 @@ var arlalala= {
     }
     return a
   },
-  difference: function(array, ary =[values]) {
+  difference: function (array, ...values) {
     var a = []
     for (var i = 0; i < array.length; i++){
       if (!(array[i] in ary)) {
@@ -35,7 +35,7 @@ var arlalala= {
     }
     return a
   },
-  differenceBy: function(array,  ary =[values], iteratee = _.identity) {
+  differenceBy: function(array,  ary, iteratee = _.identity) {
     var arraya = iteratee(array)
     var arya = iteratee(ary)
 
@@ -114,6 +114,52 @@ var arlalala= {
     return  -1
   },
   flatten: function (array) {
+    var result = []
+    for (var i = 0; i < array.length; i++){
+      if (!Array.isArray(array[i])) {
+        result.push(array[i])
+      } else {
+        for (var j = 0; j < array[i].length; j++) {
+          result.push(array[i][j])
+        }
+      }
+    }
+    return result
+  },
+  flattenDeep: flattenDeep =function (array) {
+    return array.reduce((pre, it) => {
+      if (Array.isArray(it)) {
+        return pre.concat(flattenDeep(it))
+      }
+    },[])
+  },
+  flattenDepth: function(array, depth = 1) {
 
+  },
+  fromPairs: function (pairs) {
+    var a = {}
+    for (var i = 0; i < pairs.length; i++){
+       a[pairs[i][0]] = pairs[i][1]
+    }
+    return  a
+  },
+  head: function (array) {
+    return array[0]? array[0] : undefined
+  },
+  indexOf: function(array, value, fromIndex = 0) {
+    if (fromIndex >= 0) {
+      for (var i = fromIndex; i < array.length; i++){
+        if (array[i] = value) {
+          return i
+        }
+      }
+    } else {
+      for (var i = fromIndex; -i > -array.length ; i--){
+        if (array.at(fromIndex) = value) {
+          return array.length + i
+        }
+      }
+    }
+    return -1
   },
 }
