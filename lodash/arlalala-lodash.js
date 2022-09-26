@@ -26,16 +26,24 @@ var arlalala= {
     }
     return a
   },
-  difference: function (array, ...values) {
+  difference: function (array, ...arys) {
+    var b = []
+    for (var i = 0; i < arys.length; i++){
+      for (var j = 0; j < arys[i].length; j++){
+        if (!(arys[i][j] in b)) {
+            b.push(arys[i][j])
+        }
+      }
+    }
     var a = []
     for (var i = 0; i < array.length; i++){
-      if (!(array[i] in ary)) {
+      if (!(array[i] in b)) {
           a.push(array[i])
       }
     }
     return a
   },
-  differenceBy: function(array,  ary, iteratee = _.identity) {
+  differenceBy: function(array, ...arys, iteratee = _.identity) {
     var arraya = iteratee(array)
     var arya = iteratee(ary)
 
@@ -166,9 +174,9 @@ var arlalala= {
 
   },
   join: function(array, separator = ',') {
-    var result = ""
-    for (var i = 0; i < array.length; i++){
-       result += array[i] + "" +separator
+    var result = array[0]
+    for (var i = 1; i < array.length-1; i++){
+       result += separator +"" + array[i]
     }
     return result
   },
@@ -210,13 +218,12 @@ var arlalala= {
   union: function (...arrays) {
     var result = []
     var a = {}
-    for (var i = 0; i < arrays.length; i++){
-      for (var j = 0; j < arrays[i].length; j++){
-        if (!(array[i][j] in a)) {
-          a[array[i][j]] = 0
-          result.push(array[i][j])
+    for (var array of arrays){
+      for (var item of array){
+        if (!item in result) {
+          a[item] = 1
+          result.push(item)
         }
-        a[array[i][j]]++
       }
     }
     return result
@@ -233,8 +240,36 @@ var arlalala= {
     }
     return result
   },
-  unzip: function (array) {
-    
-  }
+  unzip: function (arrays) {
+    var a = []
+    var b = []
+    for (var array in arrays) {
+      for (var item in array) {
+        a.push(item)
+        b.push(item)
+      }
+    }
+    result.push(a, b)
+    return result
+  },
+  sortedIndex: function(array, value) {
+    for (var i = 0; i < array.length; i++){
+      if (value >= array[i]) {
+        return i
+      }
+    }
+  },
+  without: function (array, ...values) {
+    var result = []
+    for (var item of array) {
+      if (!values.includes(item)) {
+         result.push(item)
+       }
+    }
+    return result
+  },
+  countBy: function (collection, iteratee = _.identity) {
+
+  },
 
 }
