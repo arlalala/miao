@@ -43,7 +43,7 @@ var arlalala= {
     }
     return a
   },
-  differenceBy: function(array, ...arys, iteratee = _.identity) {
+  differenceBy: function(array,arys, iteratee = _.identity) {
     var arraya = iteratee(array)
     var arya = iteratee(ary)
 
@@ -271,5 +271,10 @@ var arlalala= {
   countBy: function (collection, iteratee = _.identity) {
 
   },
-
+  isArray: function(value) {
+    if (this.isArray(value)) {
+      return true
+    }
+    return false
+  },
 }
