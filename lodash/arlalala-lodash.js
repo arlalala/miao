@@ -43,7 +43,7 @@ var arlalala= {
     }
     return a
   },
-  differenceBy: function(array,arys, iteratee = _.identity) {
+  differenceBy: function(array, ...arys) {
     var arraya = iteratee(array)
     var arya = iteratee(ary)
 
@@ -170,12 +170,20 @@ var arlalala= {
     }
     return a
   },
-  intersection: function (...array) {
-
+  intersection: function (...arrays) {
+    var result = []
+    for (var item of arrays[0]) {
+      for (var i = 1; i < arrays.length; i++){
+        if (item in arrays[i]) {
+           result.push(item)
+        }
+      }
+    }
+    return  result
   },
   join: function(array, separator = ',') {
     var result = array[0]
-    for (var i = 1; i < array.length-1; i++){
+    for (var i = 1; i < array.length; i++){
        result += separator +"" + array[i]
     }
     return result
@@ -255,7 +263,7 @@ var arlalala= {
   sortedIndex: function(array, value) {
     for (var i = 0; i < array.length; i++){
       if (value >= array[i]) {
-        return i
+        return i + 1
       }
     }
   },
