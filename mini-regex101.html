@@ -28,6 +28,85 @@
   font-weight: normal;
   background-color: #d5ebff;
 }
+#result strong:nth-child(even) {
+  font-weight: normal;
+  background-color: #9fcfff;
+}
+#result strong:empty {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: -1px;
+  margin-right: -1px;
+  background-image: linear-gradient(red, red)
+}
+
+#showoff {
+  position: relative;
+}
+#result {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  z-index: -1;
+}
+#result, #stringInput {
+  line-height: 1.5;
+  overflow: auto;
+}
+#regexpOptions {
+  margin: .3em;
+}
+.title {
+  margin: .3em;
+}
+[data-group-index="1"] {
+  background-color: #c4e8ac;
+}
+[data-group-index="2"] {
+  background-color: #f6d7a6;
+}
+[data-group-index="3"] {
+  background-color: #c8c8ff;
+}
+[data-group-index="4"] {
+  background-color: #f9c0bb;
+}
+[data-group-index="5"] {
+  background-color: #c8e7d6;
+}
+[data-group-index="6"] {
+  background-color: #c4e8ac;
+}
+[data-group-index="7"] {
+  background-color: #c4e8ac;
+}
+[data-group-index]:hover {
+  box-shadow: 0 0 3px 1px grey;
+  position: relative;
+  z-index: 5;
+}
+
+/* 选中里面有元素被hover的任意元素 */
+/* 重复一遍是为了刻意提升其优先级 */
+*:has(:hover):has(:hover) {
+  box-shadow: none;
+}
+/* :has([data-group-index]:hover) {
+  background-color: initial;
+} */
+/* [data-group-index]:hover * {
+  background-color: inherit !important;
+} */
+
+strong:hover :not(:has(:hover)):hover * {
+  background-color: inherit !important;
+}
+strong:hover:not(:has(:hover)) * {/*这两句话选出了拥有被hover的元素 未被hover 的状态 */
+  background-color: inherit !important;
+}
 
   </style>
 </head>
