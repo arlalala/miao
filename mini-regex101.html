@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.regexp101-main #stringInput{
+  height : 200px ;
+  background-color: transparent;
+}
+#result{
+  height : 200px;
+}
+#regexpInput, #stringInput, #result{
+  width: 500px;
+  font-size: 1.5em;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: transparent;
+  border-radius: 0.3em;
+  margin: 0.3em;
+  padding: .3em;
+  box-sizing: border-box;
+  outline: none;
+}
+#result strong {
+  font-weight: normal;
+  background-color: #d5ebff;
+}
+
+  </style>
+</head>
+<body>
+  <div class="regexp101-main">
+    <h1>Mini Regex 101</h1>
+
+    <div class="title"><strong>REGULAR EXPRESSION</strong></div>
+    <input type="text" id="regexpInput" value="\d+" oninput="run()">
+    <div id="regexpOptions">
+      <strong>OPTIONS: </strong>
+      <label><input type="checkbox" onchange="run()" checked data-flag="g" id="flagGlobal"> g</label>
+      <label><input type="checkbox" onchange="run()" checked data-flag="m" id="flagMultiline"> m</label>
+      <label><input type="checkbox" onchange="run()" data-flag="i" id="flagIgnoreCase"> i</label>
+      <label><input type="checkbox" onchange="run()" data-flag="y" id="flagSticky"> y</label>
+      <label><input type="checkbox" onchange="run()" data-flag="u" id="flagUnicode"> u</label>
+      <label><input type="checkbox" onchange="run()" data-flag="s" id="flagSingleLine"> s</label>
+      <label><input type="checkbox" onchange="run()" data-flag="d" id="flagIndices"> d</label>
+      <span id="info"></span>
+    </div>
+    <div id="showoff">
+      <textarea spellcheck="false" onscroll="同步滚动条()" oninput="run()" name="" id="stringInput">foo bar baz 111 baz 222 ddddd 333 cccc</textarea>
+      <pre id="result"></pre>
+    </div>
+    <div class="title"><strong>SUBSTITUTION</strong></div>
+    <input oninput="run()" type="text" id="replacementString">
+    <pre id="substitutionResult"></pre>
+  </div>
+  <script>
+run()
+
+function 同步滚动条() {
+  result.scrollTo(0, stringInput.scrollTop)
+}
+function run() {
+  var reStr = regexpInput.value
+  var text = stringInput.value
+  var flags = getflags()
+
+  try{
+    var re = new RegExp(reStr , flags)
+  }catch(e){
+    info.innerHtml = '出错啦' +e
+    return
+  }
+  info.innerHtml = ""
+
+  var html = ''
+
+  var match = null
+  var lastIndex = 0
+
+  while (match = re.exec(text)) {
+    html += text.slice(lastIndex, match.index)
+    html += `<strong title="Pos: ${match.index}-${match.index + match[0].length}">` + match[0] + '</strong>'
+    lastIndex = re.lastIndex
+    if (!re.global) {
+      lastIndex = match.index + match[0].length
+      break
+    }
+    if (match[0].length == 0) {
+      re.lastIndex++
+    }
+  }
+
+  html += text.slice(lastIndex)
+
+  result.innerHTML = html
+
+  substitutionResult.innerHTML = text.replace(re, replacementString.value)
+
+}
+
+
+function getFlags() {
+      var result = ''
+      if (flagGlobal.checked == true) {
+        result += 'g'
+      }
+      if (flagMultiline.checked == true) {
+        result += 'm'
+      }
+      if (flagIgnoreCase.checked == true) {
+        result += 'i'
+      }
+      if (flagSticky.checked == true) {
+        result += 'y'
+      }
+      if (flagUnicode.checked == true) {
+        result += 'u'
+      }
+      if (flagSingleLine.checked == true) {
+        result += 's'
+      }
+      if (flagIndices.checked == true) {
+        result += 'd'
+      }
+      return result
+    }
+  </script>
+</body>
+</html>

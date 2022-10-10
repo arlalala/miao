@@ -1,4 +1,49 @@
-var arlalala= {
+function iteratee(predicate) {
+  if (typeof predicate == 'function') {
+    return predicate
+  }
+  if (typeof predicate == 'string') {
+    return property(predicate)
+  }
+  if (Array.isArray(predicate)) {
+    return matchesProperty(predicate)
+  }
+  if (typeof predicate == 'object') {
+    return matches(predicate)
+  }
+}
+function isMatch(obj, target) {
+  for (var key in target) {
+    if (key in obj) {
+      if (obj[key] !== target[key]) {
+        return false
+      }
+    } else {
+      return false
+    }
+  }
+  return true
+}
+// 返回一个获取某对象propName属性的函数
+function property(propName) {
+  return function (obj) {
+    return obj[propName]
+  }
+}
+// 返回一个判断对象【是否匹配pair名值对】的函数
+function matchesProperty(pair) {
+  var [key, val] = pair
+
+  return function (obj) {
+    return obj[key] === val
+  }
+}
+function matches(target) {
+  return function (obj) {
+    return isMatch(obj, target)
+  }
+}
+var arlalala = {
   chunk: function(array, size) {
       var result = []
       var index = 0
@@ -105,9 +150,9 @@ var arlalala= {
     }
     return  array
   },
-  findIndex: function (array, predicate = _.identity, fromIndex = 0) {
+  findIndex: function (array, finder, fromIndex = 0) {
     for (var i = fromIndex; i < array.length; i++){
-      if (!predicate(array[i])) {
+      if (finder(array[i])) {
          return  i
        }
     }
@@ -285,4 +330,12 @@ var arlalala= {
     }
     return false
   },
+  every: function (array, predicate) {
+    for (var i = 0; i < collection.length; i++){
+      if (this.predicateis(predicate(i, collection[i], collection) == false)){
+        return false
+      }
+    }
+    return true
+  }
 }
